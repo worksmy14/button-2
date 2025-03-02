@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Love</title>
+</head>
+<body>
+    <button onclick="sendMessage()">Click Me ❤️</button>
+
+    <script>
+        function sendMessage() {
+            fetch("https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage?chat_id=YOUR_CHAT_ID&text=Your+girlfriend+clicked+the+button!+❤️")
+            .then(response => alert("Notification sent!"))
+            .catch(error => alert("Error sending message"));
+        }
+    </script>
+</body>
+</html>
